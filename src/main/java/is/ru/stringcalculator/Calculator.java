@@ -9,9 +9,13 @@ public class Calculator {
 		else 
 			if (text.contains(",")) {
 				String numbers [] = text.split(",");
-				return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+				int total = 0;
+				for (String number : numbers) {
+					total += toInt(number);
+				}
+				return total;
 			}
-			return 1;
+		return 1;
 	}
 
 	private static int toInt (String number) {
