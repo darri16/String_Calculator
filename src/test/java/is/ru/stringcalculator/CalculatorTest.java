@@ -51,6 +51,11 @@ public class CalculatorTest {
 	public void testNumbersBiggerThanThousand() {
 		assertEquals(2, Calculator.add("1001,2"));
 	}
+
+	@Test
+	public void testDifferentDelimiters() {
+    	assertEquals(3, Calculator.add("//;n1;2"));
+	}
 }
 
 
