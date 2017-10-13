@@ -40,8 +40,9 @@ public class Calculator {
 	private static int sum (String [] numbers) {
 		int total = 0;
 		for (String number : numbers) {
-			if (toInt(number.trim()) <= 1000)
+			if (toInt(number.trim()) <= 1000) {
 				total += toInt(number);
+			}
 		}
 		return total;
 	}
