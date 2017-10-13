@@ -16,12 +16,14 @@ public class Calculator {
 				String numbers[] = textWithoutSlash.split(delimiter);
 				return sum(numbers);
 			}
-			if (text.contains(",") || text.contains("\n")) {
+			else if (text.contains(",") || text.contains("\n")) {
 				String numbers[] = text.split(",|\n");
 				checkNegatives(numbers);
 				return sum(numbers);
 			}
-		return 1;
+			else {
+				return 1;
+			}
 		}
 	}
 
