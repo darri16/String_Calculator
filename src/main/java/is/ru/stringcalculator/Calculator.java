@@ -21,8 +21,11 @@ public class Calculator {
 				checkNegatives(numbers);
 				return sum(numbers);
 			}
+			else if (text.length() == 1) {
+				return Integer.parseInt(text);
+			}
 			else {
-				return 1;
+				return -1;
 			}
 		}
 	}
