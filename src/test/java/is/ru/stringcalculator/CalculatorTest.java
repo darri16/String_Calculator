@@ -62,15 +62,3 @@ public class CalculatorTest {
     	assertEquals(3, Calculator.add("//;n1;2"));
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
