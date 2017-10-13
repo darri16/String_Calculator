@@ -13,6 +13,10 @@ public class Calculator {
 			}
 			return 1;
 	}
+
+	private static int toInt (String number) {
+		return Integer.parseInt(number);
+	}
 }
 
 
