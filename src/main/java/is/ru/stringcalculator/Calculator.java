@@ -1,5 +1,7 @@
 package is.ru.stringcalculator;
 
+import java.util.ArrayList; 
+
 public class Calculator {
 
 	public static int add(String text) {
@@ -9,6 +11,18 @@ public class Calculator {
 		else 
 			if (text.contains(",") || text.contains("\n")) {
 				String numbers[] = text.split(",|\n");
+
+				ArrayList<Integer> negArray = new ArrayList<Integer>();
+				for (String number : numbers) {
+					if (toInt(number.trim()) < 0) {
+						negArray.add(toInt(number));
+					}	
+				}
+
+				if (negArray.size() > 0) {
+					throw new RuntimeException("Negatives not allowed: " + negArray.toString());
+				}
+
 				return sum(numbers);
 			}
 		return 1;
